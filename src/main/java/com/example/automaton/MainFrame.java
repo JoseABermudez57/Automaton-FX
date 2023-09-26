@@ -52,6 +52,11 @@ public class MainFrame extends Application {
                 concatenatedCases.append(" q11");
                 formattedCases = concatenatedCases.toString();
             } else {
+                for (String state : listCases) {
+                    concatenatedCases.append(state);
+                    concatenatedCases.append(" -> ");
+                }
+                formattedCases = concatenatedCases.toString();
                 message = "Cadena inválida";
             }
             showAlert("Resultado", message);
